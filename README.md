@@ -1,3 +1,5 @@
+# E-Commerce Sales Analytics Dashboard
+
 🛒 E-Commerce Sales Analytics Dashboard
 Tools: Python · MySQL · SQL · Power BI · Excel  
 Dataset: 9,994 orders · US Superstore Sales Data  
