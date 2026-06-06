@@ -1,10 +1,10 @@
 🛒 E-Commerce Sales Analytics Dashboard
 Tools: Python · MySQL · SQL · Power BI · Excel  
-Dataset: 9,994 orders · 4 years · US Superstore Sales Data  
-Author: Abhishek Jha · LinkedIn · GitHub
+Dataset: 9,994 orders · US Superstore Sales Data  
+Author: Abhishek Jha
 ---
 📌 Project Overview
-This project analyses 4 years of US e-commerce sales data to uncover profit trends, discount impact, regional performance, and customer segment behaviour. The goal was to answer real business questions a sales or operations team would ask — not just visualise numbers, but find actionable insights.
+This project analyses US e-commerce sales data to uncover profit trends, discount impact, regional performance, and customer segment behaviour. The goal was to answer real business questions a sales or operations team would ask — not just visualise numbers, but find actionable insights.
 The full pipeline covers data cleaning, feature engineering, MySQL database loading via a star schema, 8 SQL business queries, and a 5-page interactive Power BI dashboard.
 ---
 🗂️ Project Structure
@@ -108,4 +108,3 @@ Power BI	5-page interactive dashboard
 Excel (openpyxl)	Business insights export
 Git / GitHub	Version control
 ---
-Part of a data analytics portfolio — building toward Data Analyst and Business Analyst roles.
