@@ -1,14 +1,15 @@
-# E-Commerce Sales Analytics Dashboard
-
 🛒 E-Commerce Sales Analytics Dashboard
 Tools: Python · MySQL · SQL · Power BI · Excel  
 Dataset: 9,994 orders · US Superstore Sales Data  
 Author: Abhishek Jha
 ---
+
 📌 Project Overview
+
 This project analyses US e-commerce sales data to uncover profit trends, discount impact, regional performance, and customer segment behaviour. The goal was to answer real business questions a sales or operations team would ask — not just visualise numbers, but find actionable insights.
 The full pipeline covers data cleaning, feature engineering, MySQL database loading via a star schema, 8 SQL business queries, and a 5-page interactive Power BI dashboard.
 ---
+
 🗂️ Project Structure
 ```
 ecommerce-sales-analytics/
@@ -26,27 +27,47 @@ ecommerce-sales-analytics/
     └── business_insights.xlsx # 8-sheet Excel report
 ```
 ---
-🗄️ Database Design — Star Schema (MySQL)
-Table	Type	Rows	Description
-`fact_orders`	Fact	9,994	One row per order line
-`dim_customer`	Dimension	793	Unique customers
-`dim_product`	Dimension	1,850	Unique products
-`dim_region`	Dimension	4	West, East, Central, South
-`dim_segment`	Dimension	3	Consumer, Corporate, Home Office
-`dim_ship_mode`	Dimension	4	Shipping modes
+
+## Database Design
+
+| Table | Type | Rows | Description |
+|---|---|---|---|
+| fact_orders | Fact | 9,994 | One row per order line |
+| dim_customer | Dimension | 793 | Unique customers |
+| dim_product | Dimension | 1,850 | Unique products |
+| dim_region | Dimension | 4 | West, East, Central, South |
+| dim_segment | Dimension | 3 | Consumer, Corporate, Home Office |
+| dim_ship_mode | Dimension | 4 | Shipping modes |
+
+
 ---
-🔍 8 Business SQL Queries
-#	Business Question
+
+
+🔍 8 Business SQL Queries 
+
+#Business Question
+
 Q1	Which region generates the highest profit?
+
 Q2	What are the top 10 most profitable products?
+
 Q3	Which categories and sub-categories lose money?
+
 Q4	At what discount % does profit turn negative?
+
 Q5	What is the monthly revenue trend across 4 years?
+
 Q6	How do customer segments compare in revenue and profit?
+
 Q7	Does faster shipping correlate with higher profit?
+
 Q8	Which products consistently generate losses?
+
 ---
+
+
 📊 Key Business Findings
+
 Metric	Value
 Total Revenue	$2,297,201
 Total Profit	$286,397
@@ -54,20 +75,26 @@ Overall Profit Margin	12.5%
 Total Orders	9,994
 Unique Customers	793
 Loss-Making Orders	1,871 (18.7%)
+
 🔴 Critical Findings
+
 Furniture Tables operate at -8.56% profit margin — high sales volume masking consistent losses
 Discounts above 20% destroy profit — 91.6% of orders with 31-50% discount are loss-making
 856 orders with 51%+ discount = 100% loss rate — zero profitable orders in this band
+
 🟢 Positive Findings
 Technology category leads at 17% profit margin — Copiers alone drive significant profit
 West region is most profitable — highest margin across all 4 regions
 Consumer segment generates 50.56% of total revenue — largest and most valuable segment
 Q4 is peak revenue quarter — consistent across all 4 years of data
+
 💡 Business Recommendations
+
 Eliminate or cap discounts above 20% — current discount policy is destroying $103 average profit per order in the 31-50% band
 Review Furniture Tables pricing strategy — product generates revenue but loses money on every sale
 Invest in Technology category expansion — highest margin, strong demand
 Focus retention efforts on Consumer segment — largest revenue contributor
+
 ---
 📈 Power BI Dashboard — 5 Pages
 Page 1 — Executive Overview
@@ -103,10 +130,13 @@ In `02_load_mysql.py` and `03_analysis.py`, update:
 ```
 ---
 🛠️ Tools & Technologies
-Tool	Purpose
-Python (pandas, numpy)	Data cleaning, feature engineering
-MySQL 8.0	Star schema database, SQL queries
-Power BI	5-page interactive dashboard
-Excel (openpyxl)	Business insights export
-Git / GitHub	Version control
----
+
+## Tools Used
+
+| Tool | Purpose |
+|---|---|
+| Python (pandas, numpy) | Data cleaning and feature engineering |
+| MySQL 8.0 | Star schema database and SQL queries |
+| Power BI | 5-page interactive dashboard |
+| Excel (openpyxl) | Business insights export |
+| Git and GitHub | Version control |
